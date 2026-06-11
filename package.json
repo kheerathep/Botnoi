@@ -1,0 +1,14 @@
+{
+  "name": "academy-discord-bot",
+  "version": "2.0.0",
+  "description": "Discord Bot สำหรับทีม Academy — ลงทะเบียน, แนะนำตัว, สเตตัสบอท",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  }
+}
