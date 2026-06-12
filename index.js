@@ -86,6 +86,21 @@ process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
 
 
 // ========================================
+// Dummy Web Server for Render
+// ========================================
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Bot is running!');
+});
+
+app.listen(port, () => {
+  console.log(`🌐 Dummy server listening on port ${port}`);
+});
+
+// ========================================
 // ล็อกอินบอทด้วย TOKEN
 // ========================================
 client.login(process.env.TOKEN);
